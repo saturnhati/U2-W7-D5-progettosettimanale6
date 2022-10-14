@@ -7,6 +7,7 @@ function fetchPokemon() {
                 fetchData(pokemon);
             })
         })
+        .then(() => bottoni())
 }
 
 // ulteriore fetch per i dati di ogni pokemon (url interno al primo fetch)
@@ -51,6 +52,7 @@ function displayPokemon(pokeData) {
 
 // funzione per la searchbar
 function findPokemon() {
+
     let input = document.getElementById('searchbar').value
     let filter = input.toUpperCase()
     let cards = document.querySelectorAll('.pokecard')
@@ -69,6 +71,17 @@ let btn = document.getElementById('to-top')
 btn.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
+
+// bottoni work in progress
+function bottoni() {
+    let buttons = document.querySelectorAll('button')
+    console.log(buttons)
+    for (let button of buttons) {
+        button.addEventListener('click', () => {
+            console.log('Giuro che farò succedere qualcosa su questi bottoni!')
+        })
+    }
+}
 
 // richiedo la fetch al caricamento della pagina
 window.onload = () => {
