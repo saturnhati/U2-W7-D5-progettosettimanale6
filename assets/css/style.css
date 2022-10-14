@@ -47,7 +47,7 @@ header input::placeholder {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: rgb(185, 232, 216);
-  min-height: 100vh;
+  min-height: 84vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
