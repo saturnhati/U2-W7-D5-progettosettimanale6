@@ -1,0 +1,143 @@
+
+* {
+    font-family: 'VT323', monospace;
+}
+
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+// HEADER
+
+header {
+    .title {
+        display: flex;
+        align-items: center;
+        img {
+            width: 28px;
+            margin-right: 4px;
+        }
+        h1 {
+            margin: 0;
+        }
+    } 
+    background-color: white;
+    position: sticky;
+    top: 0;
+    padding: {
+        left: 12px;
+        right: 12px;
+        top: 10px;
+        bottom: 10px;
+    }
+    border-bottom: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input {
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        font-family: 'VT323', monospace;
+    }
+    input::placeholder {
+        font-family: 'VT323', monospace;
+    }
+}
+
+// MAIN
+
+.container {
+    padding: {
+        left: 1.6rem;
+        right: 1.6rem;
+        top: 1rem;
+        bottom: 1rem;
+    }
+    background-color: rgb(185, 232, 216);
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 6px;
+    .pokecard {
+        box-shadow: 1px 1px 3px rgb(0 0 0 / .3);
+        width: 8rem;
+        padding: {
+            left: 20px;
+            right: 20px;
+        }
+        border-radius: 8px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .pokecard-body {
+            margin: {
+                bottom: 16px;
+            }
+            p {
+                margin: {
+                    top: 2px;
+                    bottom: 2px;
+                }
+            }
+            h4 {
+                text-transform: capitalize;
+                margin: {
+                    top: 2px;
+                    bottom: 2px;
+                }
+            }
+            button {
+                font-size: 0.8rem;
+                text-transform: capitalize;
+                border: 2px solid black;
+                border-radius: 3px;
+                margin: {
+                    top: 6px;
+                }
+                padding: {
+                    top: 3px;
+                    bottom: 3px;
+                    left: 14px;
+                    right: 14px;
+                }
+            }
+            button:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// TO TOP
+
+.to-top {
+    font-size: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 14px;
+    bottom: 14px;
+}
+
+// FOOTER
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: {
+        top: 10px;
+        bottom: 10px;
+    }
+    border-top: 3px solid black;
+    a {
+        color: rgb(185, 232, 216);
+    }
+    a:hover {
+        color: rgb(146, 190, 176);
+    }
+}

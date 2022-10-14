@@ -1,0 +1,24 @@
+{
+  "name": "u2-w7-d5-progettosettimanale6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:start": "sass --no-source-map assets/scss/style.scss assets/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saturnhati/U2-W7-D5-progettosettimanale6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saturnhati/U2-W7-D5-progettosettimanale6/issues"
+  },
+  "homepage": "https://github.com/saturnhati/U2-W7-D5-progettosettimanale6#readme",
+  "dependencies": {
+    "google-fonts": "^1.0.0",
+    "sass": "^1.55.0"
+  }
+}

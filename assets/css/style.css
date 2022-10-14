@@ -1,0 +1,116 @@
+* {
+  font-family: "VT323", monospace;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .title {
+  display: flex;
+  align-items: center;
+}
+header .title img {
+  width: 28px;
+  margin-right: 4px;
+}
+header .title h1 {
+  margin: 0;
+}
+header input {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "VT323", monospace;
+}
+header input::placeholder {
+  font-family: "VT323", monospace;
+}
+
+.container {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(185, 232, 216);
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 6px;
+}
+.container .pokecard {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  width: 8rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .pokecard .pokecard-body {
+  margin-bottom: 16px;
+}
+.container .pokecard .pokecard-body p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.container .pokecard .pokecard-body h4 {
+  text-transform: capitalize;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.container .pokecard .pokecard-body button {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-top: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.container .pokecard .pokecard-body button:hover {
+  cursor: pointer;
+}
+
+.to-top {
+  font-size: 2rem;
+  position: fixed;
+  z-index: 100;
+  right: 14px;
+  bottom: 14px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 3px solid black;
+}
+footer a {
+  color: rgb(185, 232, 216);
+}
+footer a:hover {
+  color: rgb(146, 190, 176);
+}
