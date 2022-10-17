@@ -3,11 +3,11 @@ function fetchPokemon() {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
         .then(response => response.json())
         .then((allpokemon) => {
+            console.log(allpokemon.results)
             allpokemon.results.forEach((pokemon) => {
                 fetchData(pokemon);
             })
         })
-        .then(() => bottoni())
 }
 
 // ulteriore fetch per i dati di ogni pokemon (url interno al primo fetch)
@@ -16,7 +16,10 @@ function fetchData(pokemon) {
     fetch(url)
         .then(response => response.json())
         .then(function (pokeData) {
-            displayPokemon(pokeData)
+            console.log(pokeData)
+            setTimeout(() => {
+                displayPokemon(pokeData)
+            }, 2000);
         })
 }
 
@@ -42,6 +45,9 @@ function displayPokemon(pokeData) {
     let pokeBtn = document.createElement('button')
     pokeBtn.innerText = 'info'
     pokeBtn.setAttribute("id", "info-button")
+    pokeBtn.addEventListener('click', () => {
+        console.log('Giuro che farò succedere qualcosa su questi bottoni!')
+    })
     // attacco il titolo, p e bottone al body della card
     pokeBody.append(pokeId, pokeName, pokeBtn)
     // attacco img e card body alla card intera
@@ -52,7 +58,6 @@ function displayPokemon(pokeData) {
 
 // funzione per la searchbar
 function findPokemon() {
-    console.log('controllo')
     let input = document.getElementById('searchbar').value
     let filter = input.toUpperCase()
     let cards = document.querySelectorAll('.pokecard')
@@ -76,17 +81,6 @@ let btn = document.getElementById('to-top')
 btn.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
-
-// bottoni work in progress
-function bottoni() {
-    let buttons = document.querySelectorAll('button')
-    console.log(buttons)
-    for (let button of buttons) {
-        button.addEventListener('click', () => {
-            console.log('Giuro che farò succedere qualcosa su questi bottoni!')
-        })
-    }
-}
 
 // richiedo la fetch al caricamento della pagina
 window.onload = () => {
