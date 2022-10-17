@@ -97,10 +97,15 @@ header {
                 }
             }
             button {
+                box-sizing: border-box;
+                background-color: rgb(214, 48, 48);
+                color: white;
                 font-size: 0.8rem;
                 text-transform: capitalize;
-                border: 2px solid black;
+                box-shadow: 2px 2px 3px rgb(0 0 0 / .4);
+                border: 2px solid rgb(214, 48, 48);
                 border-radius: 3px;
+                transition: .3s;
                 margin: {
                     top: 6px;
                 }
@@ -112,6 +117,8 @@ header {
                 }
             }
             button:hover {
+                // transform: scale(1.05);
+                border: 2px solid black;
                 cursor: pointer;
             }
         }
@@ -163,6 +170,7 @@ footer {
     height: 25%;
     background-color: white;
     position: absolute;
+    z-index: 200;
     top: 34%;
     left: 15%;
     padding: {
@@ -202,8 +210,13 @@ footer {
     }
     border-radius: 10px;
     i {
+        font-size: 1.3rem;
         display: block;
         text-align: right;
+        transition: .3s;
+    }
+    #close-icon:hover {
+        color: rgb(214, 48, 48);
     }
     #poke-card-modal {
         display: flex;
@@ -219,7 +232,15 @@ footer {
             flex-direction: row;
         }
         h2 {
+            font-size: 1.2rem;
             text-transform: capitalize;
+        }
+        h4 {
+            margin: {
+                top: 16px;
+                bottom: 16px;
+            }
+            font-size: 1.2rem;
         }
     }
 

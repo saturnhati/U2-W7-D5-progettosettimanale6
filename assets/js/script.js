@@ -57,12 +57,12 @@ function displayPokemon(pokeData) {
         let pokeTypeModal = document.getElementById('poke-type')
         let pokeImgModal = document.getElementById('poke-pic')
         let pokeImgModal2 = document.getElementById('poke-pic2')
-        pokeNameModal.innerHTML = `Name: ${pokeData.name}`
-        pokeIdModal.innerHTML = `Id: #${pokeData.id}`
         pokeImgModal.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeData.id}.png`
         pokeImgModal2.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokeData.id}.png`
+        pokeIdModal.innerHTML = `<span>ID</span>: #${pokeData.id}`
+        pokeNameModal.innerHTML = `<span>NAME</span>: ${pokeData.name}`
         pokeTypeModal.innerHTML = ""
-        let pTypes = `Type: ${pokeData.types[0].type.name}`
+        let pTypes = `<span>TYPE</span>: ${pokeData.types[0].type.name}`
         if (pokeData.types.length == 2) {
             pTypes += ` - ${pokeData.types[1].type.name}`
         }

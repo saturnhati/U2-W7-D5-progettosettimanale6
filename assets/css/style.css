@@ -84,10 +84,15 @@ header input::placeholder {
   margin-bottom: 2px;
 }
 .container .pokecard .pokecard-body button {
+  box-sizing: border-box;
+  background-color: rgb(214, 48, 48);
+  color: white;
   font-size: 0.8rem;
   text-transform: capitalize;
-  border: 2px solid black;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgb(214, 48, 48);
   border-radius: 3px;
+  transition: 0.3s;
   margin-top: 6px;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -95,6 +100,7 @@ header input::placeholder {
   padding-right: 14px;
 }
 .container .pokecard .pokecard-body button:hover {
+  border: 2px solid black;
   cursor: pointer;
 }
 
@@ -136,6 +142,7 @@ footer a:hover {
   height: 25%;
   background-color: white;
   position: absolute;
+  z-index: 200;
   top: 34%;
   left: 15%;
   padding-top: 2rem;
@@ -184,8 +191,13 @@ footer a:hover {
   }
 }
 #modal-body i {
+  font-size: 1.3rem;
   display: block;
   text-align: right;
+  transition: 0.3s;
+}
+#modal-body #close-icon:hover {
+  color: rgb(214, 48, 48);
 }
 #modal-body #poke-card-modal {
   display: flex;
@@ -208,7 +220,13 @@ footer a:hover {
   }
 }
 #modal-body #poke-card-modal h2 {
+  font-size: 1.2rem;
   text-transform: capitalize;
+}
+#modal-body #poke-card-modal h4 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
 }
 
 .invisible {
