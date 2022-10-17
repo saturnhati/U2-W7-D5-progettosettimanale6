@@ -52,7 +52,7 @@ function displayPokemon(pokeData) {
 
 // funzione per la searchbar
 function findPokemon() {
-
+    console.log('controllo')
     let input = document.getElementById('searchbar').value
     let filter = input.toUpperCase()
     let cards = document.querySelectorAll('.pokecard')
@@ -65,6 +65,11 @@ function findPokemon() {
         }
     }
 }
+
+// svuoto la searchbar al click sulla X dell'input type
+document.getElementById("searchbar").addEventListener("search", function (event) {
+    findPokemon()
+});
 
 // funzione di scroll to top
 let btn = document.getElementById('to-top')
