@@ -1,3 +1,4 @@
+@import "./mixins";
 
 * {
     font-family: 'VT323', monospace;
@@ -20,6 +21,9 @@ header {
         }
         h1 {
             margin: 0;
+            @include xs {
+                font-size: 1rem;
+            }
         }
     } 
     background-color: white;
@@ -140,4 +144,87 @@ footer {
     a:hover {
         color: rgb(146, 190, 176);
     }
+}
+
+/* MODALE */
+
+#modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    z-index: 100;
+    top:0;
+    left:0;
+}
+
+#modal-body {
+    width: 70%;
+    height: 25%;
+    background-color: white;
+    position: absolute;
+    top: 34%;
+    left: 15%;
+    padding: {
+        top: 2rem;
+        left: 2rem;
+        right: 2rem;
+    }
+    @include xs {
+        height: 40%;
+        left: 5%;
+        padding: {
+            top: 2rem;
+            left: 1rem;
+            right: 1rem;
+        }
+    }
+    @include sm {
+        height: 40%;
+        left: 10%;
+    }
+    @include md {
+        height: 25%;
+        width: 60%;
+        left: 10%;
+    }
+    @include lg {
+        height: 25%;
+        width: 60%;
+        max-width: 700px;
+        left: 10%;
+    }
+    @include xl {
+        left: 20%;
+    }
+    @include xxl {
+        left: 30%;
+    }
+    border-radius: 10px;
+    i {
+        display: block;
+        text-align: right;
+    }
+    #poke-card-modal {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        @include xs {
+            flex-direction: column;
+        }
+        @include sm {
+            flex-direction: column;
+        }
+        @include md {
+            flex-direction: row;
+        }
+        h2 {
+            text-transform: capitalize;
+        }
+    }
+
+}
+
+.invisible {
+    display: none;
 }

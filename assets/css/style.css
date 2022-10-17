@@ -31,6 +31,11 @@ header .title img {
 header .title h1 {
   margin: 0;
 }
+@media (max-width: 576px) {
+  header .title h1 {
+    font-size: 1rem;
+  }
+}
 header input {
   border: 2px solid black;
   border-radius: 5px;
@@ -113,4 +118,99 @@ footer a {
 }
 footer a:hover {
   color: rgb(146, 190, 176);
+}
+
+/* MODALE */
+#modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+#modal-body {
+  width: 70%;
+  height: 25%;
+  background-color: white;
+  position: absolute;
+  top: 34%;
+  left: 15%;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 10px;
+}
+@media (max-width: 576px) {
+  #modal-body {
+    height: 40%;
+    left: 5%;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 576px) {
+  #modal-body {
+    height: 40%;
+    left: 10%;
+  }
+}
+@media (min-width: 768px) {
+  #modal-body {
+    height: 25%;
+    width: 60%;
+    left: 10%;
+  }
+}
+@media (min-width: 992px) {
+  #modal-body {
+    height: 25%;
+    width: 60%;
+    max-width: 700px;
+    left: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  #modal-body {
+    left: 20%;
+  }
+}
+@media (min-width: 1400px) {
+  #modal-body {
+    left: 30%;
+  }
+}
+#modal-body i {
+  display: block;
+  text-align: right;
+}
+#modal-body #poke-card-modal {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 576px) {
+  #modal-body #poke-card-modal {
+    flex-direction: column;
+  }
+}
+@media (min-width: 576px) {
+  #modal-body #poke-card-modal {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  #modal-body #poke-card-modal {
+    flex-direction: row;
+  }
+}
+#modal-body #poke-card-modal h2 {
+  text-transform: capitalize;
+}
+
+.invisible {
+  display: none;
 }

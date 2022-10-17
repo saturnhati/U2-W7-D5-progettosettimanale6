@@ -46,7 +46,28 @@ function displayPokemon(pokeData) {
     pokeBtn.innerText = 'info'
     pokeBtn.setAttribute("id", "info-button")
     pokeBtn.addEventListener('click', () => {
-        console.log('Giuro che farò succedere qualcosa su questi bottoni!')
+        let modal = document.getElementById('modal')
+        modal.classList.remove('invisible')
+        let closeIcon = document.getElementById('close-icon')
+        closeIcon.addEventListener('click', () => {
+            modal.classList.add('invisible')
+        })
+        let pokeNameModal = document.getElementById('poke-name')
+        let pokeIdModal = document.getElementById('poke-id-modal')
+        let pokeTypeModal = document.getElementById('poke-type')
+        let pokeImgModal = document.getElementById('poke-pic')
+        let pokeImgModal2 = document.getElementById('poke-pic2')
+        pokeNameModal.innerHTML = `Name: ${pokeData.name}`
+        pokeIdModal.innerHTML = `Id: #${pokeData.id}`
+        pokeImgModal.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokeData.id}.png`
+        pokeImgModal2.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokeData.id}.png`
+        pokeTypeModal.innerHTML = ""
+        let pTypes = `Type: ${pokeData.types[0].type.name}`
+        if (pokeData.types.length == 2) {
+            pTypes += ` - ${pokeData.types[1].type.name}`
+        }
+        pokeTypeModal.innerHTML = pTypes
+        console.log(pokeData.name)
     })
     // attacco il titolo, p e bottone al body della card
     pokeBody.append(pokeId, pokeName, pokeBtn)
